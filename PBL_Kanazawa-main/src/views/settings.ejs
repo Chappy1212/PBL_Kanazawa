@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>設定</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+
+<body>
+    <div class="container text-center mt-4" style="width: 35%;">
+        <h1 class="mb-4 text-primary">設定</h1>
+        <a href="/" class="btn btn-outline-secondary mb-3">ホームへ戻る</a>
+        <div class="card">
+            <div class="card-body">
+                <%- include('partials/form.ejs', {
+                    formAction: '/api/settings',
+                    title: lensInfo.title,
+                    date: lensInfo.date,
+                    type: lensInfo.type,
+                    stock: lensInfo.stock,
+                    removeTime: lensInfo.removeTime
+                }) %>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
